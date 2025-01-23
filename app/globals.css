@@ -1,21 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.first .link::after {
+  @apply absolute w-0 h-full bottom-0 right-0 bg-[#ffffff] transition-all ease-out duration-1000;
+  content: '';
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.first .link:hover::after {
+  @apply w-full;
+}
+.hidden-bg {
+  background-color: transparent;
+  transform: translateY(-100%);
+  transition: transform 1s ease-out;
+  pointer-events: none;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.visible-bg {
+  transform: translateY(0);
+  transition: transform 1s ease-out;
+  pointer-events: apply;
+}
+
+.visible-bg {
+  background-color: black;
 }
