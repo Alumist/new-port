@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: #dfd8dc;
+}
+
+body {
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .first .link::after {
-  @apply absolute w-0 h-full bottom-0 left-0 bg-[#ffffff] transition-all ease-out duration-1000;
+  @apply absolute w-0 h-full bottom-0 left-0 bg-[#f1edee] transition-all ease-out duration-1000;
   content: '';
 }
 
@@ -24,5 +33,5 @@
 }
 
 .visible-bg {
-  background-color: #f1edee;
+  background-color: #dfd8dc;
 }
